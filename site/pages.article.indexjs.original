@@ -1,0 +1,208 @@
+import Head from 'next/head'
+
+export default function Home() {
+  return (
+    <div className="page-container">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Square+Peg:400"></link>
+      <Head>
+        <title>David Ebreo</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body lang="en">
+        <section className="header">
+          <div className="container">
+              <div className="content title-banner">
+                <a href="https://arhyth.de/"><img className="avatar" src="https://arhyth.de/img/profile.jpg" srcset="https://arhyth.de/img/profile.jpg 1x"></img></a>
+                <div className="self-intro">Hi! I'm David... Christian, Filipino, salaryman. This is my site.</div>
+              </div>
+              <div className="content icons">
+                <a href="//github.com/arhyth" target="_blank" rel="noopener"><img className="logo" src="https://arhyth.de/img/github.svg" alt="github"></img></a>
+                <a href="//twitter.com/arhyth" target="_blank" rel="noopener"><img className="logo" src="https://arhyth.de/img/twitter.svg" alt="twitter"></img></a>
+                <a href="//linkedin.com/in/davidebreo" target="_blank" rel="noopener"><img className="logo" src="https://arhyth.de/img/linkedin.svg" alt="linkedin"></img></a>
+                <a href="//instagram.com/arhyth" target="_blank" rel="noopener"><img className="logo" src="https://arhyth.de/img/instagram.svg" alt="instagram"></img></a>        
+                <a href="mailto:arhyth@gmail.com"><img className="logo" src="https://arhyth.de/img/email.svg" alt="email"></img></a>
+              </div>
+          </div>
+        </section>
+
+        <section className="main">
+          <div className="container">
+            <div className="content">
+              <ul>
+                <li className="post-item">
+                  <span className="meta">
+                    <time datetime="2021-02-21T22:22:41+08:00">Feb 21, 2021</time>
+                  </span>
+                  <a href="https://arhyth.de/blog/awesome-tech-blogs/">
+                    <span>Awesome tech blogs</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </body>
+      <style jsx>{`
+        .page-container {
+          min-height: 100vh;
+          padding: 0 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        main {
+          padding: 5rem 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          display: block;
+          text-align: center;
+          margin: auto;
+        }
+
+        .description {
+          line-height: 1.5;
+          font-size: 1.5rem;
+        }
+
+        code {
+          background: #fafafa;
+          border-radius: 5px;
+          padding: 0.75rem;
+          font-size: 1.1rem;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .grid {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 800px;
+          margin-top: 3rem;
+        }
+
+        .logo {
+          width: 25px;
+          height: 25px;
+          opacity: 0.3;
+          background-color: #f7f7f7;
+          margin: 0 auto;
+          display: inline;
+        }
+
+
+        .avatar {
+          border-radius: 50%;
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+          max-width: 50px;
+        }
+
+        .post-item {
+          align-items: center;
+          display: flex;
+          list-style: none;
+        }
+
+        .post-item .meta {
+          color: #666;
+          min-width: 100px;
+          text-align: center;
+        }
+
+        .no-bullet {
+          color: transparent;
+          font-style: oblique;
+          margin-top: 2rem;
+          margin-bottom: 1rem;        
+        }
+
+        .header .container {
+          -webkit-justify-content: flex-start;
+          -moz-justify-content: flex-start;
+          -ms-justify-content: flex-start;
+          justify-content: flex-start;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .header .content {
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          align-items: center;
+        }
+
+        .header .self-intro {
+          font-family: Square Peg;
+          font-size: 3em;
+          letter-spacing: -0.005rem;
+          font-weight: 700;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+          color: #333;
+          font-weight: 400;
+          color: #555;
+          justify-content: center;
+          width: 100%;
+          margin-left: 0.5em;
+        }
+
+        .icons {
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          width: 100%;
+          justify-content: center;
+        }
+
+        ul {
+          padding-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin: 0;
+        }
+
+        .title-banner {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+        }
+
+        @media (max-width: 600px) {
+          .grid {
+            width: 100%;
+            flex-direction: column;
+          }
+        }
+      `}</style>
+
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
+    </div>
+  )
+}
